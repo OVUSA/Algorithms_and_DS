@@ -1,4 +1,4 @@
-package CrackingCodingInterview;
+package Algorithms_and_DS;
 
 import java.io.IOException;
 import java.util.Scanner;

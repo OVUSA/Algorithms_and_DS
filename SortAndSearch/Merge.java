@@ -1,4 +1,4 @@
-package CrackingCodingInterview.SortAndSearch;
+package Algorithms_and_DS.SortAndSearch;
 
 public class Merge {
     public static void main(String[] args) {
@@ -12,13 +12,15 @@ public class Merge {
     public static void merge(){
 
     }
-    //divide an array untill is one or no elements left
-    public static int [] sort( int [] arr, int l, int right){
-        int mid = l+(right- l)/2;
+    //divide an array until is one or no elements left
+    public static void sort( int [] arr, int left, int right){
 
-        sort(arr,l,mid);
-        sort(arr,mid+1,right);
+        if(left<right) {
+            int mid = left + (right - left) / 2;
 
+            sort(arr, left, mid);
+            sort(arr, mid + 1, right);
+        }
     }
 
 }

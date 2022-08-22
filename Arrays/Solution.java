@@ -1,4 +1,4 @@
-package CrackingCodingInterview.Arrays;
+package Algorithms_and_DS.Arrays;
 
 import java.util.*;
 

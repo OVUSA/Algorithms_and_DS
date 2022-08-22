@@ -1,4 +1,4 @@
-package CrackingCodingInterview.FibonacciVar;
+package Algorithms_and_DS.FibonacciVar;
 
 //given number of stairs
 // you can step 1 or 2 stairs at a time , how many distinct ways you can climb up

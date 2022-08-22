@@ -1,4 +1,4 @@
-package CrackingCodingInterview.Arrays;
+package Algorithms_and_DS.Arrays;
 
 public class Substring {
     public static void main(String[] args) {

@@ -1,8 +1,4 @@
-package CrackingCodingInterview.Arrays;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+package Algorithms_and_DS.Arrays;
 
 public class MaxSubArray {
     public static void main(String [] args){

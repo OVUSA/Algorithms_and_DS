@@ -1,4 +1,4 @@
-package CrackingCodingInterview.Arrays;
+package Algorithms_and_DS.Arrays;
 //https://leetcode.com/problems/design-parking-system/submissions/
 
 import java.util.HashMap;

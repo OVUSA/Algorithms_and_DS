@@ -1,4 +1,4 @@
-package CrackingCodingInterview.FibonacciVar;
+package Algorithms_and_DS.FibonacciVar;
 
 public class minCostClimbingStairs {
     public static void main(String[] args) {

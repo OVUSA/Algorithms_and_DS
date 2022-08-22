@@ -1,6 +1,5 @@
-package CrackingCodingInterview.Arrays;
+package Algorithms_and_DS.Arrays;
 
-import java.util.Arrays;
 import java.util.Scanner;
 // abcdef  --> fedcba
 // abcnft --> abd_npngh

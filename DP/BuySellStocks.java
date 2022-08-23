@@ -4,25 +4,29 @@ public class BuySellStocks {
 
 
     public static void main(String[] args) {
-        int [] prices = new int[]{7,1,5,3,6,4};
+        int [] prices = new int[]{3,2,6,5,0,3};
         System.out.println("Max profit is:"+ maxProfit(prices));
 
     }
 
-    // two pointer technic doesn't quiet work
     public static int maxProfit(int[] prices) {
-        int buy = Integer.MAX_VALUE;
-        int sell = 0;
+        int buy = Integer.MAX_VALUE;int sell = 0;
+        int profit = 0;
 
-        int i =0;
-        int j = prices.length-1;
-        while(i<=j){
-            buy = Math.min(buy,prices[i]);
-            i++;
-            sell = Math.max(sell,prices[j]);
-            j--;
+        for (int i = 0;i<prices.length-1;i++){
+            if(prices[i]<=buy){
+                buy = prices[i];
+                sell = 0;
+            }
+            int j = i+1;
+
+            if(prices[j]-buy >= profit){
+                sell = prices[j];
+            }
+            profit = Math.max(profit,(sell-buy));
+
         }
-        int res = sell -buy;
-        return res<0?0:res;
+        return profit ;
+
     }
 }

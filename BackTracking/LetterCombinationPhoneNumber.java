@@ -7,9 +7,14 @@ import java.util.Map;
 
 public class LetterCombinationPhoneNumber {
     public static void main(String[] args) {
+        List<String> comb = letterCombinations("23");
+        for( String i: comb){
+            System.out.print(i+" ");
+        }
+
 
     }
-    public List<String> letterCombinations(String digits) {
+    public static List<String> letterCombinations(String digits) {
         List<String> combinations = new ArrayList<>();
 
         Map<String, String> dial = new HashMap<>();
@@ -23,11 +28,13 @@ public class LetterCombinationPhoneNumber {
         dial.put("8","tuv");
         dial.put("9","wxyz");
 
-        String first = dial.get(digits.charAt(0));
-
-        for( int i = 0;i< first.length();i++){
-
+        ArrayList<String>letterToUse = new ArrayList<>();
+        for(int j=0;j<digits.length();j++){
+            letterToUse.add(dial.get(digits.charAt(j)));
         }
+
+
+        //ghi  mno  pqrs
 
 
     }

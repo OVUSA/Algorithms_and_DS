@@ -9,26 +9,35 @@ package Algorithms_and_DS.LinkedList;
 * */
 public class PartitionList {
     public ListNode partition(ListNode head, int x) {
-        ListNode first = head;
-        ListNode second = head;
-        ListNode temp = first;
-
-        //find a node with x value
-        while (first.val != x) {
-            first = first.next;
+        if(head.next==null){
+            return head;
         }
-        //iterate until the end of the list
-        while (first != null) {
-            if (first.next.val <= x) {
-                temp = first.next;
-                first.next = first.next.next;
 
-                temp.next = second.next;
-                second.next = temp;
-                temp = temp.next;
+
+        ListNode before_head = new ListNode(0);
+        ListNode before = before_head;
+
+        ListNode after_head = new ListNode(0);
+        ListNode after = after_head;
+
+
+        while(head!=null){
+            if(head.val<x){
+                before.next = head;
+                before = before.next;
+
+            }else{
+                after.next = head;
+                after = after.next;
             }
-            first = first.next;
+            head = head.next;
         }
-        return head;
+
+        after.next = null;
+
+        before.next = after_head.next;
+
+
+        return before_head.next;
     }
 }

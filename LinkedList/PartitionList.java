@@ -1,5 +1,12 @@
 package Algorithms_and_DS.LinkedList;
-
+/*
+*
+[1,4,3,2,5,2]
+3
+[2,1,1]
+2
+*
+* */
 public class PartitionList {
     public ListNode partition(ListNode head, int x) {
         ListNode first = head;
@@ -9,7 +16,6 @@ public class PartitionList {
         //find a node with x value
         while (first.val != x) {
             first = first.next;
-
         }
         //iterate until the end of the list
         while (first != null) {
@@ -20,10 +26,8 @@ public class PartitionList {
                 temp.next = second.next;
                 second.next = temp;
                 temp = temp.next;
-
             }
             first = first.next;
-
         }
         return head;
     }

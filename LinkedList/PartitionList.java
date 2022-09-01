@@ -12,7 +12,7 @@ public class PartitionList {
         if(head.next==null){
             return head;
         }
-// create two linked list one before X and another one after X
+        // create two linked list one before X and another one after X
 
         ListNode before_head = new ListNode(0);
         ListNode before = before_head;

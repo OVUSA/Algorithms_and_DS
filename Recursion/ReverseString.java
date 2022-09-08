@@ -5,20 +5,22 @@ public class ReverseString {
         char [] s = new char[]{'h','e','l','l','o'};
         reverseString(s);
     }
-    public static void reverseString(char[] s){
-        helper(s, s.length-1);
 
+    public static void reverseString(char[] s) {
+            int i = 0;
+            int j= s.length-1;
+
+            while(i<j){
+                char temp = s[i];
+                s[i]=s[j];
+                s[j]= temp;
+                i++;
+                j--;
+
+            }
 
     }
-    public static void helper(char [] s,int length){
-        if(length==0){
-            System.out.print(s[length]);
-        }else{
-            System.out.print(s[length]);
-            helper(s,length-1);
 
-        }
-    }
 
 
 }

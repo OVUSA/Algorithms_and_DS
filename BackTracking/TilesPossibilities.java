@@ -1,6 +1,7 @@
 package Algorithms_and_DS.BackTracking;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -10,21 +11,28 @@ public class TilesPossibilities {
 
     }
     public static int numTilePossibilities(String tiles) {
+        // add an array to keep a track of used characters when iterate through
+        boolean [] usedChar = new boolean[tiles.length()];
+        Arrays.fill(usedChar,false);
         Set<String> st = new HashSet<>();
-         numTilePossibilities(tiles,"",st);
-         print(st);
-        return st.size();
+         numTilePossibilities(tiles,"",st, usedChar);
+
+        return st.size()-1;
 
     }
 //
-    public static void numTilePossibilities(String tiles, String current, Set<String>st){
+    public static void numTilePossibilities(String tiles, String current, Set<String>st,boolean[] used){
         if(current.length()>tiles.length()){
             return;
         }else {
             st.add(current);
             for (int i = 0; i < tiles.length(); i++) {
-                if(!st.contains(current + tiles.charAt(i))){
-                numTilePossibilities(tiles, current + tiles.charAt(i), st);}
+                if(used[i]!= true){
+                    used[i]=true;
+                    numTilePossibilities(tiles,current+tiles.charAt(i),st,used);
+                    used[i]= false;
+
+                }
             }
         }
 

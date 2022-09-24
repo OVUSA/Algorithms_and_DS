@@ -1,6 +1,7 @@
 package Algorithms_and_DS.SortAndSearch;
 
 // return the highest pick of the mountain
+// 852. Peak Index in a Mountain Array
 public class Mountain {
     public static void main(String[] args) {
         int []nums = new int[]{0,10,8,9,5,0};
